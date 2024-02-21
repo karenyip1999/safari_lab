@@ -54,5 +54,8 @@ INSERT INTO assignment ( employee_id, enclosure_id) VALUES (2,4);
 SELECT name FROM animal WHERE enclosure_id = (SELECT id FROM enclosure WHERE name = 'Dog Enclosure');
 --Returns Scooby from the dog enclosure
 
+--Query 2 : 
+SELECT name FROM staff WHERE id = (SELECT employee_id FROM assignment WHERE enclosure_id = (SELECT id FROM enclosure WHERE name = 'Dog Enclosure') );
+-- Returns Karen for the dog enclosure
 
 
