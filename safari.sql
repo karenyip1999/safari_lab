@@ -50,6 +50,9 @@ INSERT INTO assignment ( employee_id, enclosure_id) VALUES (2,1);
 INSERT INTO assignment ( employee_id, enclosure_id) VALUES (1,3);
 INSERT INTO assignment ( employee_id, enclosure_id) VALUES (2,4);
 
+-- Query 1 : 
+SELECT name FROM animal WHERE enclosure_id = (SELECT id FROM enclosure WHERE name = 'Dog Enclosure');
+--Returns Scooby from the dog enclosure
 
 
 
