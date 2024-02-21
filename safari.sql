@@ -30,3 +30,26 @@ CREATE TABLE assignment(
     enclosure_id int REFERENCES enclosure(id) 
 );
 
+INSERT INTO enclosure (name, capacity, closedForMaintenance) VALUES ('Tiger Enclosure', 5, true);
+INSERT INTO enclosure (name, capacity, closedForMaintenance) VALUES ('Monkey Enclosure', 3, false);
+INSERT INTO enclosure (name, capacity, closedForMaintenance) VALUES ('Dog Enclosure', 4, false);
+INSERT INTO enclosure (name, capacity, closedForMaintenance) VALUES ('Sloth Enclosure', 4, false);
+
+INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Tony', 'Tiger', 35, 1);
+INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Bob', 'Tiger', 45, 1);
+INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Coco','Monkey', 27, 2);
+INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Scooby', 'Dog', 49, 3);
+INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Sid', 'Sloth', 60, 4);
+
+
+INSERT INTO staff (name, employeeNumber) VALUES ('Karen', 1);
+INSERT INTO staff (name, employeeNumber) VALUES ('Zakaria', 2);
+
+INSERT INTO assignment ( employee_id, enclosure_id) VALUES (1,2);
+INSERT INTO assignment ( employee_id, enclosure_id) VALUES (2,1);
+INSERT INTO assignment ( employee_id, enclosure_id) VALUES (1,3);
+INSERT INTO assignment ( employee_id, enclosure_id) VALUES (2,4);
+
+
+
+
