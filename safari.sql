@@ -54,8 +54,13 @@ INSERT INTO assignment ( employee_id, enclosure_id) VALUES (2,4);
 SELECT name FROM animal WHERE enclosure_id = (SELECT id FROM enclosure WHERE name = 'Dog Enclosure');
 --Returns Scooby from the dog enclosure
 
+--SELECT * FROM animal INNER JOIN enclosures ON animal.enclosure_id = enclosure.id WHERE enclosure.name = 'Dog Enclosure'; 
+-- JOIN method added from lab review
+
 --Query 2 : 
 SELECT name FROM staff WHERE id = (SELECT employee_id FROM assignment WHERE enclosure_id = (SELECT id FROM enclosure WHERE name = 'Dog Enclosure') );
 -- Returns Karen for the dog enclosure
 
+--SELECT name  FROM staff INNER JOIN assignment ON staff.id = assignment.staff_id WHERE assignment.enclosure_id = 1;
+--JOIN method added from lab review
 
